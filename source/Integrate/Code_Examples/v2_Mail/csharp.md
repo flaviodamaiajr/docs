@@ -81,7 +81,7 @@ namespace SmtpMail
         mailMsg.AlternateViews.Add(AlternateView.CreateAlternateViewFromString(html, null, MediaTypeNames.Text.Html));
 
         // Init SmtpClient and send
-        SmtpClient smtpClient = new SmtpClient("smtp.sendgrid.net", Convert.ToInt32(587));
+        SmtpClient smtpClient = new SmtpClient("smtp.sendgrid.net", 587);
         System.Net.NetworkCredential credentials = new System.Net.NetworkCredential("username@domain.com", "yourpassword");
         smtpClient.Credentials = credentials;
 
